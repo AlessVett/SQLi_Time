@@ -9,13 +9,12 @@ from time import time
 class SQLi:
     def __init__(self, url='localhost', path="/", query='', method='get', characters='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_=^') -> object:
         self.characters = characters
-        if url.startswith("http://") or url.startswith("http://"):
+        if url.startswith("http://") or url.startswith("https://"):
             self.url = url
         else:
             self.url = "{0}{1}{2}?{3}=".format("http://", url, path, query)
         self.method = method
         self.schema = ''
-        self.tables = []
         if self.verify_url():
             self.session = requests.Session()
         else:
