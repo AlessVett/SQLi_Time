@@ -1,4 +1,8 @@
 <?php
+/**
+ * Autore: Alessandro Vettor
+ * Data e Ora: Giovedì 2 Settembre 2021 15:32
+ */
 
   $dns = 'dblib:host=your_hostname;dbname=your_db;charset=UTF-8';
   $localhost = 'localhost';
